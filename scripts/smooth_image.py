@@ -1,8 +1,8 @@
 from envtest import smooth_image
-
-from scipy import misc
+# import matplotlib
+# matplotlib.use('WebAgg')
 import matplotlib.pyplot as plt
-
+from scipy import misc
 
 image = misc.ascent()
 sigma = 5
@@ -14,4 +14,4 @@ f.add_subplot(1, 2, 1)
 plt.imshow(image)
 f.add_subplot(1, 2, 2)
 plt.imshow(smoothed_image)
-plt.show()
+plt.show(block=True)
